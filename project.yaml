@@ -1,8 +1,8 @@
 version: '5.0'
 
 actions:
-  generate_dataset:
-    run: ehrql:v1 generate-dataset analysis/dataset_definition.py --output output/dataset.csv.gz
+  load_fastglm:
+    run: r:v3 analysis/load-fastglm.R
     outputs:
-      highly_sensitive:
-        dataset: output/dataset.csv.gz
+      moderately_sensitive:
+        check: output/fastglm-check.txt
